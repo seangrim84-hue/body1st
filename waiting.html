@@ -262,7 +262,12 @@ body{
        3) key 가 없는 경우 — 알림톡 심사자가 버튼 URL을 직접 여는 상황.
           이때 잠금 화면 대신 강의가 보여야 심사에서 확인이 됩니다.
      key 가 있는데 유효하지 않은 경우(만료·취소)는 기존 안내 화면이 그대로 뜹니다. */
-  var NOKEY   = !key;
+  /* 접속키는 40자 랜덤 문자열입니다.
+     그 형식이 아니면(빈 값, 또는 치환되지 않은 "#{key}" 같은 자리표시자)
+     서버에 묻지 않고 미리보기로 처리합니다.
+     심사자가 버튼 URL을 그대로 열면 브라우저에 따라
+     key 가 빈 값이 되기도 하고 "#{key}" 문자열이 들어오기도 합니다. */
+  var NOKEY   = !key || !/^[A-Za-z0-9_-]{32,}$/.test(key);
   var PREVIEW = params.get("preview") === "1" || location.protocol === "file:" || NOKEY;
 
   var PREVIEW_DATA = {
