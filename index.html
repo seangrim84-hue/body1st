@@ -164,7 +164,7 @@ h2.sec.on-dark{color:#fff;}
   /* 상단 배너 : 문구(좌) + 인물(우) — 그 아래로 나머지 내용 */
   .s-hero .grid{
     grid-template-columns:1fr 43%;
-    grid-template-areas:"head fig" "cap cap" "rest rest";
+    grid-template-areas:"head fig" ".   cap" "rest rest";
     column-gap:10px; row-gap:0; align-items:end; padding:0 0 118px;
   }
   .hero-head{align-self:center; padding:26px 0 30px;}
@@ -189,7 +189,7 @@ h2.sec.on-dark{color:#fff;}
   }
   .s-hero .hero-fig::before{width:150%; top:50%; left:50%;}
 
-  .hero-cap{ padding-top:0; margin-top:20px; font-size:11.5px; }
+  .hero-cap{ padding-top:0; margin:12px -16px 0 0; font-size:11.5px; }
 }
 @media (max-width:920px) and (max-height:700px){
   .s-hero .hero-fig{height:281px;}
