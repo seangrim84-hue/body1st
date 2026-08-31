@@ -464,32 +464,32 @@ h2.sec.on-dark{color:#fff;}
 .c2-note{margin:20px 0 0; font-size:14px; color:#6E7278;}
 
 /* ---------- 08 PROGRAM ---------- */
-.prog-lead{
-  margin:0 auto 50px; max-width:820px; text-align:center;
-  font-size:22px; line-height:1.85; color:var(--txt); font-weight:500;
+.pg-lead{
+  margin:0 auto; max-width:800px;
+  font-size:19px; line-height:1.95; color:var(--mut); font-weight:400;
 }
-.prog-lead .hl{color:var(--pt); font-weight:700;}
-.levels{display:flex; align-items:center; justify-content:center; gap:0; flex-wrap:wrap; margin-bottom:52px;}
-.level{
-  padding:15px 26px; border:1px solid var(--line); font-size:16px; font-weight:700;
-  color:var(--mut); background:#fff;
+.pg-lead b{color:var(--ink); font-weight:800;}
+.pg-pull{
+  margin:34px auto 0; max-width:700px; padding-top:32px;
+  border-top:1px solid var(--line);
+  font-size:28px; font-weight:800; line-height:1.6; letter-spacing:-1.1px; color:var(--ink);
 }
-.level:first-child{border-radius:999px 0 0 999px;}
-.level:last-child{border-radius:0 999px 999px 0; background:var(--ink); color:#fff; border-color:var(--ink);}
-.level + .level{border-left:0;}
-.parts{display:grid; grid-template-columns:repeat(4,1fr); gap:14px;}
-.part{
-  border:1px solid var(--line); border-radius:12px; padding:26px 16px; text-align:center;
-  font-size:16px; font-weight:700; color:var(--ink); background:#fff;
+.pg-pull b{display:block; color:var(--pt); font-weight:900;}
+
+.pg-cards{display:grid; grid-template-columns:repeat(3,1fr); gap:18px; margin-top:56px;}
+.pg-c{
+  background:#fff; border:1px solid var(--line); border-radius:16px;
+  padding:38px 28px; text-align:center;
 }
-.part i{display:block; font-style:normal; font-size:22px; margin-bottom:10px;}
+.pg-n{display:block; font-size:22px; font-weight:900; color:var(--pt); line-height:1;}
+.pg-t{margin:16px 0 0; font-size:21px; font-weight:800; color:var(--ink); letter-spacing:-.7px; line-height:1.45;}
+
 @media (max-width:900px){
-  .prog-lead{font-size:17px;}
-  .levels{flex-direction:column;}
-  .level{width:100%; text-align:center; border-radius:8px !important; border-left:1px solid var(--line) !important;}
-  .level + .level{margin-top:8px;}
-  .parts{grid-template-columns:repeat(2,1fr);}
-  .part{font-size:14.5px; padding:20px 10px;}
+  .pg-lead{font-size:16px; line-height:1.9;}
+  .pg-pull{margin-top:26px; padding-top:24px; font-size:20px; letter-spacing:-.8px;}
+  .pg-cards{grid-template-columns:1fr; gap:12px; margin-top:36px;}
+  .pg-c{padding:28px 22px;}
+  .pg-t{font-size:18.5px;}
 }
 
 /* ---------- 09 CURRICULUM ---------- */
@@ -1038,30 +1038,31 @@ h2.sec.on-dark{color:#fff;}
 <section class="s-program" id="program">
   <div class="wrap">
     <div class="reveal center">
-      <h2 class="sec">체형분석운동 전문가 양성과정</h2>
-      <p class="prog-lead">
-        단순한 체형교정 교육이 아니라<br>
-        <span class="hl">분석하고 → 판단하고 → 적용하고 → 다시 검증하는</span><br>
-        체형분석운동 전문가 양성과정입니다.
+      <h2 class="sec">‘입문’은 내용의 깊이를 뜻하지 않습니다.<br>BODY1ST를 처음 시작하는 과정이라는 의미입니다.</h2>
+      <p class="pg-lead">
+        BODY1ST의 <b>전체 분석 체계</b>를 처음부터 끝까지 배우고,<br>
+        수강기간 동안 실습을 제외한 모든 교육 내용을<br>
+        <b>제한 없이 반복해서</b> 학습합니다.
+      </p>
+      <p class="pg-pull">
+        처음에는 기준을 배우고,<br>
+        <b>반복할수록 연결이 보입니다.</b>
       </p>
     </div>
 
-    <div class="levels reveal">
-      <span class="level">입문자 과정</span>
-      <span class="level">【중급 과정명】</span>
-      <span class="level">【심화 과정명】</span>
-      <span class="level">Superb Master 과정</span>
-    </div>
-
-    <div class="parts reveal">
-      <div class="part"><i>💻</i>온라인 이론</div>
-      <div class="part"><i>🏋️</i>오프라인 실습</div>
-      <div class="part"><i>📐</i>체형 분석</div>
-      <div class="part"><i>📚</i>케이스 스터디</div>
-      <div class="part"><i>✍️</i>과제</div>
-      <div class="part"><i>💬</i>피드백</div>
-      <div class="part"><i>📝</i>검정</div>
-      <div class="part"><i>🎖️</i>인증</div>
+    <div class="pg-cards reveal">
+      <div class="pg-c">
+        <span class="pg-n">01</span>
+        <p class="pg-t">전체 시스템 학습</p>
+      </div>
+      <div class="pg-c">
+        <span class="pg-n">02</span>
+        <p class="pg-t">무제한 반복수강</p>
+      </div>
+      <div class="pg-c">
+        <span class="pg-n">03</span>
+        <p class="pg-t">분석적 사고의 연결</p>
+      </div>
     </div>
   </div>
 </section>
