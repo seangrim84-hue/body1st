@@ -406,22 +406,43 @@ h2.sec.on-dark{color:#fff;}
 }
 
 /* ---------- 06 DIFFERENCE ---------- */
-@media (max-width:900px){ .diffs{grid-template-columns:1fr !important;} .c2-line{font-size:16px;} .c2-line b{font-size:22px;} .s-cta2{padding:70px 0;} }
-.diffs{display:grid; grid-template-columns:repeat(2,1fr); gap:20px; margin-top:52px;}
-.diff{background:#fff; border:1px solid var(--line); border-radius:14px; padding:32px 30px;}
-.diff .x{
-  font-size:18px; font-weight:700; color:var(--mut); line-height:1.6;
-  padding-bottom:18px; margin-bottom:18px; border-bottom:1px solid var(--line);
-  position:relative; padding-left:30px;
+.dfx-lead{margin:0 auto; max-width:760px; font-size:18px; line-height:1.95; color:var(--mut);}
+.dfx-lead2{
+  margin:30px auto 0; max-width:700px; padding-top:28px;
+  border-top:1px solid var(--line);
+  font-size:21px; line-height:1.85; color:var(--ink); font-weight:500; letter-spacing:-.5px;
 }
-.diff .x::before{content:"✕"; position:absolute; left:0; top:1px; color:#C4C7CB; font-size:15px;}
-.diff .o{
-  font-size:18.5px; font-weight:700; color:var(--ink); line-height:1.7;
-  position:relative; padding-left:30px; letter-spacing:-.4px;
+.dfx-lead2 b{color:var(--pt); font-weight:900;}
+
+.dfx{display:grid; grid-template-columns:repeat(4,1fr); gap:0; margin-top:56px;}
+.dfx-i{padding:8px 24px; text-align:center; border-left:1px solid var(--line);}
+.dfx-i:first-child{border-left:0;}
+.dfx-n{
+  display:block; font-size:30px; font-weight:900; color:var(--pt);
+  line-height:1; letter-spacing:-1px;
 }
-.diff .o::before{content:"→"; position:absolute; left:0; top:1px; color:var(--pt); font-weight:900;}
+.dfx-t{margin:16px 0 0; font-size:19px; font-weight:800; color:var(--ink); letter-spacing:-.6px; line-height:1.5;}
+
+.dfx-end{
+  margin:60px auto 0; max-width:940px; text-align:center;
+  font-size:30px; font-weight:900; line-height:1.6; letter-spacing:-1.3px; color:var(--ink);
+}
+.dfx-end b{color:var(--pt); font-weight:900;}
+
+@media (max-width:900px){
+  .dfx-lead{font-size:15.5px; line-height:1.9;}
+  .dfx-lead2{margin-top:24px; padding-top:22px; font-size:17px;}
+  .dfx{grid-template-columns:repeat(2,1fr); gap:0; margin-top:36px;}
+  .dfx-i{padding:20px 12px; border-left:1px solid var(--line); border-top:1px solid var(--line);}
+  .dfx-i:nth-child(-n+2){border-top:0;}
+  .dfx-i:nth-child(odd){border-left:0;}
+  .dfx-n{font-size:24px;}
+  .dfx-t{margin-top:12px; font-size:16px;}
+  .dfx-end{margin-top:40px; font-size:19px; letter-spacing:-.9px;}
+}
 
 /* ---------- 07 WAITING CTA ---------- */
+@media (max-width:900px){ .c2-line{font-size:16px;} .c2-line b{font-size:22px;} .s-cta2{padding:70px 0;} }
 .s-cta2{
   background:var(--ink); text-align:center; position:relative; overflow:hidden;
   padding:96px 0;
@@ -879,7 +900,6 @@ h2.sec.on-dark{color:#fff;}
 <section class="s-core">
   <div class="wrap">
     <div class="reveal center">
-      <span class="eyebrow">CORE IDEA</span>
       <div class="core-lead">
         <p class="cl-1">분석은 단순히<br>몸의 특징을 찾는 일이 아닙니다.</p>
         <p class="cl-2">
@@ -911,7 +931,6 @@ h2.sec.on-dark{color:#fff;}
 <section class="s-system">
   <div class="wrap">
     <div class="reveal center">
-      <span class="eyebrow">SYSTEM</span>
       <h2 class="sec">비슷해 보이는 체형도,<br>몸이 말하는 이야기는 다를 수 있습니다.</h2>
       <p class="sys-sub">보이는 모습은 시작점일 뿐,<br>해석은 그 이후부터 시작됩니다.</p>
     </div>
@@ -955,27 +974,40 @@ h2.sec.on-dark{color:#fff;}
 <section class="s-diff">
   <div class="wrap">
     <div class="reveal center">
-      <span class="eyebrow">DIFFERENCE</span>
-      <h2 class="sec">다른 교육과 무엇이 다른가</h2>
+      <h2 class="sec">운동의 정답을 외우는 대신,<br>판단하는 방법을 배웁니다.</h2>
+      <p class="dfx-lead">
+        회원의 몸은 매번 다르기에<br>
+        하나의 정답을 모든 사람에게 적용할 수 없습니다.
+      </p>
+      <p class="dfx-lead2">
+        BODY1ST는 <b>보고, 연결하고, 추론하고, 판단하는</b><br>
+        전문가의 사고과정을 훈련합니다.
+      </p>
     </div>
-    <div class="diffs reveal">
-      <div class="diff">
-        <p class="x">운동을 외우지 않습니다.</p>
-        <p class="o">왜 필요한지 판단하는 방법을 배웁니다.</p>
+
+    <div class="dfx reveal">
+      <div class="dfx-i">
+        <span class="dfx-n">01</span>
+        <p class="dfx-t">선택의 기준을 배웁니다</p>
       </div>
-      <div class="diff">
-        <p class="x">단편적 모습만 보지 않습니다.</p>
-        <p class="o">정적 · 동적 · 보행 · 평형반응을 연결합니다.</p>
+      <div class="dfx-i">
+        <span class="dfx-n">02</span>
+        <p class="dfx-t">정보를 연결합니다</p>
       </div>
-      <div class="diff">
-        <p class="x">정답을 알려주지 않습니다.</p>
-        <p class="o">스스로 판단할 수 있는 사고과정을 훈련합니다.</p>
+      <div class="dfx-i">
+        <span class="dfx-n">03</span>
+        <p class="dfx-t">스스로 추론합니다</p>
       </div>
-      <div class="diff">
-        <p class="x">교육에서 끝나지 않습니다.</p>
-        <p class="o">실제 회원에게 적용할 수 있도록 훈련합니다.</p>
+      <div class="dfx-i">
+        <span class="dfx-n">04</span>
+        <p class="dfx-t">현장에서 검증합니다</p>
       </div>
     </div>
+
+    <p class="dfx-end reveal">
+      더 많은 운동을 아는 것보다,<br>
+      <b>왜 이 운동을 선택했는지 설명할 수 있는 전문가로.</b>
+    </p>
   </div>
 </section>
 
@@ -995,7 +1027,6 @@ h2.sec.on-dark{color:#fff;}
 <section class="s-program" id="program">
   <div class="wrap">
     <div class="reveal center">
-      <span class="eyebrow">PROGRAM</span>
       <h2 class="sec">체형분석운동 전문가 양성과정</h2>
       <p class="prog-lead">
         단순한 체형교정 교육이 아니라<br>
@@ -1028,7 +1059,6 @@ h2.sec.on-dark{color:#fff;}
 <section class="s-curri" id="curri">
   <div class="wrap-n">
     <div class="reveal center">
-      <span class="eyebrow">CURRICULUM</span>
       <h2 class="sec">5단계로 몸을 보는 눈을 만듭니다</h2>
     </div>
     <div class="steps reveal">
@@ -1049,7 +1079,6 @@ h2.sec.on-dark{color:#fff;}
 <section class="s-who" id="who">
   <div class="wrap">
     <div class="reveal center">
-      <span class="eyebrow">WHO</span>
       <h2 class="sec">이런 분이라면<br>BODY1ST 교육이 필요합니다.</h2>
     </div>
     <div class="who-list reveal">
@@ -1067,7 +1096,6 @@ h2.sec.on-dark{color:#fff;}
   <div class="wrap">
     <div class="auth-grid">
       <div class="reveal">
-        <span class="eyebrow on-dark">AUTHORITY</span>
         <p class="auth-line">
           <span class="hl">20년</span> 가까이 현장에서 몸을 보고,<br>
           <span class="hl">11년간</span> 전문가를 교육해 왔습니다.
@@ -1091,7 +1119,6 @@ h2.sec.on-dark{color:#fff;}
 <section class="s-testi">
   <div class="wrap">
     <div class="reveal center">
-      <span class="eyebrow">TESTIMONIAL</span>
       <h2 class="sec">교육생의 변화</h2>
     </div>
     <div class="tcards reveal">
