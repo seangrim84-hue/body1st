@@ -847,13 +847,10 @@ h2.sec.on-dark{color:#fff;}
 .ftr-brand{margin:0 0 18px; display:flex; align-items:baseline; gap:10px;}
 .ftr-brand b{color:#E6E7E9; font-size:17px; font-weight:800; letter-spacing:-.3px;}
 .ftr-brand span{color:#5E6167; font-size:13.5px;}
-.ftr-info{margin:0; padding:0; list-style:none; display:grid; gap:5px;}
+.ftr-info{margin:0; padding:0; list-style:none; display:grid; gap:6px;}
 .ftr-info li{color:#7D838B;}
-.ftr-info i{
-  display:inline-block; min-width:104px; font-style:normal; color:#5E6167;
-  position:relative; padding-right:12px; margin-right:10px;
-}
-.ftr-info i::after{content:"|"; position:absolute; right:0; color:#33353A;}
+.ftr-info i{font-style:normal; color:#5E6167; margin-right:9px;}
+.ftr-info em{font-style:normal; color:#33353A; margin:0 14px;}
 .ftr-info a{color:#7D838B; text-decoration:none;}
 .ftr-info a:hover{color:#B9BCC1;}
 .ftr-bot{
@@ -884,7 +881,7 @@ h2.sec.on-dark{color:#fff;}
 .pp-dl dd{margin:0; font-size:15px; color:var(--txt); line-height:1.7;}
 .pp-note{margin:22px 0 0; font-size:13.5px; line-height:1.85; color:var(--mut);}
 @media (max-width:900px){
-  .ftr-info i{min-width:88px;}
+  .ftr-info em{display:block; height:0; overflow:hidden; margin:4px 0;}
   .pp-box{padding:30px 22px 26px;}
   .pp-dl{grid-template-columns:1fr; gap:4px 0;}
   .pp-dl dd{margin-bottom:12px;}
@@ -1665,10 +1662,8 @@ h2.sec.on-dark{color:#fff;}
   <div class="wrap">
     <p class="ftr-brand"><b>BODY1ST</b><span>바디퍼스트</span></p>
     <ul class="ftr-info">
-      <li><i>대표</i>김두엽</li>
-      <li><i>사업자등록번호</i>630-88-01910</li>
-      <li><i>주소</i>서울특별시 서초구 동광로 95-1, 5층</li>
-      <li><i>전화</i><a href="tel:07077227899">070-7722-7899</a> · <a href="tel:01028554268">010-2855-4268</a></li>
+      <li><i>대표</i>김두엽<em>|</em><i>사업자등록번호</i>630-88-01910</li>
+      <li><i>주소</i>서울특별시 서초구 동광로 95-1, 5층<em>|</em><i>전화</i><a href="tel:07077227899">070-7722-7899</a> · <a href="tel:01028554268">010-2855-4268</a></li>
     </ul>
     <p class="ftr-bot">
       <a href="#privacy" class="ftr-pp" id="ppOpen">개인정보처리방침</a>
