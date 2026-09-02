@@ -127,7 +127,7 @@ body{
 @keyframes roll{from{transform:translateX(0);}to{transform:translateX(-50%);}}
 
 /* 바로가기 */
-.links{display:grid; grid-template-columns:repeat(3,1fr); gap:10px; margin-bottom:16px;}
+.links{display:grid; grid-template-columns:repeat(2,1fr); gap:10px; margin-bottom:16px;}
 .links a, .links button{
   display:block; width:100%; background:#fff; border:1px solid var(--line); border-radius:14px;
   padding:22px 8px; text-align:center; text-decoration:none; cursor:pointer;
@@ -135,7 +135,6 @@ body{
 }
 .links a:hover, .links button:hover{border-color:var(--ink);}
 .links .ic{display:block; font-size:22px; margin-bottom:8px;}
-.links .cancel{color:var(--mut);}
 
 /* FAQ */
 .faq{padding:26px 24px 10px;}
@@ -212,7 +211,6 @@ body{
     <div class="links">
       <a id="link1" href="#"><span class="ic">📘</span>교육과정 안내</a>
       <a id="link2" href="#"><span class="ic">💬</span>문의하기</a>
-      <button class="cancel" id="btnCancel"><span class="ic">✕</span>대기 취소</button>
     </div>
 
     <div class="card faq">
@@ -269,8 +267,8 @@ body{
     ticker: [],
 
     faq: [
-      { q: "대기 취소를 누르면 나중에 다시 신청할 수 없나요?",
-        a: "다시 신청하실 수 있습니다. 랜딩페이지에서 대기신청을 새로 하시면 됩니다." },
+      { q: "대기를 취소하고 싶으면 어떻게 하나요?",
+        a: "카카오톡 채널로 문의해 주시면 처리해 드립니다. 취소하신 뒤에도 랜딩페이지에서 다시 신청하실 수 있습니다." },
       { q: "연락은 언제 오나요?",
         a: "모집이 시작되면 신청하신 번호로 일정과 신청 방법을 안내드립니다." },
       { q: "대기 순번을 다른 사람에게 넘길 수 있나요?",
@@ -448,22 +446,6 @@ body{
       op.scrollIntoView({ behavior:"smooth", block:"center" });
     }, 400);
   }
-
-  /* ---------- 대기 취소 ---------- */
-  $("btnCancel").addEventListener("click", function(){
-    if(!confirm("대기 신청을 취소하시겠습니까?\n취소 후에도 랜딩페이지에서 다시 신청하실 수 있습니다.")) return;
-    var btn = this; btn.disabled = true;
-    call("cancel", function(res){
-      btn.disabled = false;
-      if(res && res.status === "success"){
-        showNotice("✓", "대기가 취소되었습니다.",
-          "다시 신청하고 싶으시면 아래 버튼을 눌러주세요.",
-          "다시 대기신청하기", CONFIG.landingUrl);
-      }else{
-        alert("처리에 실패했습니다. 잠시 후 다시 시도해 주세요.");
-      }
-    });
-  });
 
   /* ---------- 시작 ---------- */
   if(PREVIEW){
